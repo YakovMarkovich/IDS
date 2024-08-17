@@ -12,7 +12,7 @@ export default interface globalInterface {
   /** set Name for your component */
   name?: string;
   /** set direction */
-  direction: "ltr" | "rtl" | string;
+  direction?: "ltr" | "rtl" | string;
   /** Custom class names */
   className?: string;
   /** Add test ID only for JEST */

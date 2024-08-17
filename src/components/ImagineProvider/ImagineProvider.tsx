@@ -1,5 +1,5 @@
 import  { useEffect, useMemo, useState } from "react";
-import styles from ".ImagineProvider.module.scss";
+import styles from "./scss/ImagineProvider.module.scss";
 import ImagineProviderType from "./interface/ImagineProvider_interface";
 import {
   toCssClass,

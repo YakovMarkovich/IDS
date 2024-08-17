@@ -1,6 +1,6 @@
 export default interface spaceInterface {
     /** width */
-    width: '20' | '25' | '33' | '50' | '75' | '90' | '100' | 'fit-content' | 'auto' | string;
+    width?: '20' | '25' | '33' | '50' | '75' | '90' | '100' | 'fit-content' | 'auto' | string;
     /** padding className */
     padding?: '0' | '5' | '10' | '15' | '20' | '25' | '30' | '50' | '60' | '70' | string;
     paddingTop?: '0' | '5' | '10' | '15' | '20' | '25' | '30' | '50' | '60' | '70' | string;

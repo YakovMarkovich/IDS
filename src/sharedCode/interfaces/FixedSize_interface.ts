@@ -1,14 +1,14 @@
 export default interface FixedSizeInterface {
   /** set min width */
-  fixedMinWidth: string;
+  fixedMinWidth?: string;
   /** set max width */
-  fixedMaxWidth: string;
+  fixedMaxWidth?: string;
   /** set width */
-  fixedWidth: string;
+  fixedWidth?: string;
   /** set min height */
-  fixedMinHeight: string;
+  fixedMinHeight?: string;
   /** set max height */
-  fixedMaxHeight: string;
+  fixedMaxHeight?: string;
   /** set height */
-  fixedHeight: string;
+  fixedHeight?: string;
 }
