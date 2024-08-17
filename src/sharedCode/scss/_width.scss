@@ -1,0 +1,17 @@
+@use "sass:map";
+@import "./variable";
+
+
+@layer PROPS {
+    @each $i in map.keys($width) {
+        .width-#{$i} {
+            width: map_get($width, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($maxWidth) {
+        .maxWidth-#{$i} {
+            max-width: map_get($maxWidth, "#{$i}");
+        }
+    }
+}

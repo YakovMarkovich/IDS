@@ -1,0 +1,20 @@
+@layer HDS, PROPS, DEV;
+//main settings
+@import "./variable";
+//reset and global css
+
+@layer HDS {
+    @import './reset';
+}
+
+:global(.imaginePage){
+    @import "./typograph";
+    @import "./color";
+    @import "./shadow";
+    @import "./spacing";
+    @import "./border";
+    @import "./flex";
+    @import "./direction";
+    @import "./width";
+    @import "./mediaColumns";
+}

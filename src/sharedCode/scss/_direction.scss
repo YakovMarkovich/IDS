@@ -1,0 +1,10 @@
+@use "sass:map";
+@import "./variable";
+
+@layer PROPS {
+    @each $i in map.keys($direction) {
+        .direction-#{$i} {
+            direction: map_get($direction, "#{$i}");
+        }
+    }
+}

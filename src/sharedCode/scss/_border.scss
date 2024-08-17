@@ -1,0 +1,36 @@
+@use "sass:map";
+@import "variable";
+@import "palette.scss";
+
+@layer PROPS {
+    @each $i in map.keys($border){
+        .border-#{$i}{
+            border: map-get($border, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($roundCorner){
+        .borderRadius-#{$i}{
+            @if #{$i} == 'round' {
+                border-radius: 50%;
+                align-content: center;
+                font-variant: full-width;
+                line-height: 2;
+            } @else {
+                border-radius: map-get($roundCorner, "#{$i}");
+            }
+        }
+    }
+
+    @each $i in map.keys($primary){
+        .borderColor-primary-#{$i}{
+            border-color: map-get($primary, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($secondary){
+        .borderColor-secondary-#{$i}{
+            border-color: map-get($secondary, "#{$i}");
+        }
+    }
+}

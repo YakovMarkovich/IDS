@@ -1,0 +1,93 @@
+@use "sass:map";
+@import "./variable";
+
+
+@layer PROPS {
+    // padding
+    @each $i in map.keys($spacing){
+        .padding-#{$i}{
+            padding: map_get($spacing, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($spacing){
+        .paddingTop-#{$i}{
+            padding-top: map_get($spacing, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($spacing){
+        .paddingBottom-#{$i}{
+            padding-bottom: map_get($spacing, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($spacing){
+        .paddingRight-#{$i}{
+            padding-right: map_get($spacing, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($spacing){
+        .paddingLeft-#{$i}{
+            padding-left: map_get($spacing, "#{$i}");
+        }
+    }
+
+    //Margin
+    @each $i in map.keys($spacing){
+        .margin-#{$i}{
+            margin: map_get($spacing, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($spacing){
+        .marginTop-#{$i}{
+            margin-top: map_get($spacing, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($spacing){
+        .marginBottom-#{$i}{
+            margin-bottom: map_get($spacing, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($spacing){
+        .marginRight-#{$i}{
+            margin-right: map_get($spacing, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($spacing){
+        .marginLeft-#{$i}{
+            margin-left: map_get($spacing, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($spacing){
+        .marginCenter-#{$i}{
+            margin: map_get($spacing, "#{$i}") auto;
+        }
+    }
+
+    // GAP
+
+    @each $i in map.keys($spacing){
+        .gap-#{$i}{
+            gap: map_get($spacing, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($spacing){
+        .gapCol-#{$i}{
+            column-gap: map_get($spacing, "#{$i}");
+        }
+    }
+    
+    @each $i in map.keys($spacing){
+        .gapRow-#{$i}{
+            row-gap: map_get($spacing, "#{$i}");
+        }
+    }
+}

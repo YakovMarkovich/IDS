@@ -1,0 +1,19 @@
+@layer DEV {
+    @mixin floatContainerAnimation {
+        position: fixed !important;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+
+    .slideInRight {
+        @include floatContainerAnimation;
+        animation-name: slideInRight-animation;
+    }
+
+    .slideOutRight {
+        @include floatContainerAnimation;
+        animation-timing-function: ease-out;
+        animation-name: slideOutRight-animation;
+    }
+}

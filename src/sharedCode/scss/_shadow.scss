@@ -1,0 +1,16 @@
+@use "sass:map";
+@import "./variable";
+
+@layer PROPS {
+    @each $i in map.keys($shadows){
+        .shadow-#{$i}{
+            box-shadow: map_get($shadows, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($innerShadow){
+        .innerShadow-#{$i}{
+            box-shadow: map_get($innerShadow, "#{$i}");
+        }
+    }
+}

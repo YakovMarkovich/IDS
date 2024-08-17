@@ -1,0 +1,50 @@
+@use "sass:map";
+@import "./variable";
+
+
+@layer PROPS {
+    @each $i in map.keys($fontSize){
+        .fontSize-#{$i}{
+            font-size: map_get($fontSize, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($fontWeight){
+        .fontWeight-#{$i}{
+            font-weight: map_get($fontWeight, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($textAlign){
+        .textAlign-#{$i}{
+            text-align: map_get($textAlign, "#{$i}");
+        }
+    }
+
+    .showEllipsis {
+        display: inline;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    @each $i in map.keys($rowLimit){
+        .rowLimit-#{$i}{
+            display: -webkit-box;
+            -webkit-line-clamp: map_get($rowLimit, "#{$i}");
+            overflow: hidden;
+            white-space: unset;
+            -webkit-box-orient: vertical;
+        }
+    }
+   
+}
+
+//added padding-bottom with Higher priority
+@layer DEV {
+    @each $i in map.keys($rowLimit){
+        .rowLimit-#{$i}{
+            padding-bottom: 0
+        }
+    }
+}

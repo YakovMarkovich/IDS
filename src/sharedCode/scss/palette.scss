@@ -1,0 +1,76 @@
+@use "sass:map";
+//Primary colors
+$primary: (
+  "0": transparent,
+  "50": #ffffff,
+  "100": #f1f5fd,
+  "150": #1431971f,
+  "250": #1431974d,
+  "500": #106ae1,
+  "600": #2737c7,
+  "700": #143197,
+  "800": #081545,
+);
+
+//Secondary colors
+$secondary: (
+  "200": #1f1f1f1a,
+  "300": #d7d7d7,
+  "400": #1f1f1f80,
+  "500": #1f1f1f,
+  "600": #f98d3f,
+  "700": #49b0b6,
+);
+
+//Disabled colors
+$disabled: (
+  "fg": #8f8f8f,
+  "bg": #d7d7d7,
+);
+
+//Gradients colors
+$gradients: (
+  "100": linear-gradient(0deg, #f1f5fd 0.21%, rgba(241, 245, 253, 0) 100%),
+  "700": linear-gradient(207.93deg, #44a5ff -9.31%, #9ce7ff 86.57%),
+  "GR-1": linear-gradient(267.46deg, #ebffbf 0.38%, #95e3af 101.36%),
+  "GR-2": linear-gradient(207.93deg, #44a5ff -9.31%, #9ce7ff 86.57%),
+  "GR-3": linear-gradient(208.74deg, #ffc86d 5.87%, #ffe797 96.51%),
+  "GR-4": linear-gradient(208.74deg, #45c4cc 5.87%, #d7ffbe 96.51%),
+  "GR-5":
+    linear-gradient(
+      46.06deg,
+      rgba(47, 191, 165, 0.75) 12.74%,
+      rgba(148, 236, 255, 0.75) 92.3%
+    ),
+);
+
+//Harel Lego Colors
+$brand: (
+    "brand-grey": #5A605E,
+    "brand-green": #54BD5E,
+    "brand-blue": #0082E0,
+    "brand-yellow": #FFC229,
+);
+
+//align-items
+$nested: (
+    "xxl": 780px,
+    "xl": 700px,
+    "lg": 600px,
+    "md": 450px,
+    "sm": 300px,
+    "xs": 150px 
+);
+
+// SVG Colors
+$svgColor: (
+    "0": transparent,
+    "50": invert(100%) sepia(0%) saturate(0%) hue-rotate(69deg) brightness(101%) contrast(105%),
+    "100": invert(94%) sepia(12%) saturate(6028%) hue-rotate(186deg) brightness(111%) contrast(127%),
+    "150": invert(94%) sepia(12%) saturate(6028%) hue-rotate(186deg) brightness(111%) contrast(127%),
+    "250": invert(94%) sepia(12%) saturate(6028%) hue-rotate(186deg) brightness(111%) contrast(127%),
+    "500": invert(29%) sepia(79%) saturate(4680%) hue-rotate(207deg) brightness(96%) contrast(87%),
+    "600": invert(15%) sepia(94%) saturate(3915%) hue-rotate(235deg) brightness(83%) contrast(89%),
+    "700": invert(9%) sepia(60%) saturate(5958%) hue-rotate(232deg) brightness(106%) contrast(95%),
+    "800": invert(8%) sepia(41%) saturate(3593%) hue-rotate(214deg) brightness(95%) contrast(103%),
+);

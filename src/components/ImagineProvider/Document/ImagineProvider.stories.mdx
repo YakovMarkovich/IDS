@@ -1,0 +1,48 @@
+import { Meta } from  '@storybook/addon-docs';
+
+<Meta title="Wrappers/1- ImagineProvider/Document" />
+
+# Container Component
+
+<br/>
+<br/>
+
+### References
+
+>[אפיון טכני](https://confprod:8443/display/DIG/ImagineProvider)
+
+<br/>
+<br/>
+
+### Quick start
+
+install <u>**Imagine**</u> package into your application
+
+
+```bash
+
+cd yourApp
+
+npm install --save Imagine
+```
+
+### Start using <u>`ImagineProvider` </u> component
+
+<br/>
+<br/>
+
+##### Example:
+
+```javascript
+import {ImagineProvider, Text} from 'imagine';
+
+function App() {
+    
+    return (
+
+        <ImagineProvider flexDirection={'col'} padding={'20'} background={'primary-500'} color={'primary-50'}>
+            <Text text={'זהו רכיב מעטפת הנותן לספרייה את כל היכולות שלו. ללא רכיב זה הספרייה לא תעבור כמו שצריך'}/>
+        </ImagineProvider>
+    ); 
+}
+```

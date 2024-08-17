@@ -1,0 +1,203 @@
+@use "sass:map";
+@import "./variable";
+
+//set columns
+
+&.col-2 {
+    display: grid;
+    grid-template-columns: 100%;
+    @media ($xs) {
+        & > div {
+            width: 100%;
+        }
+    }
+    @media ($md) {
+       grid-template-columns: minmax(calc(50% - 100px), 50%) minmax(calc(50% - 100px), 50%);
+    }
+}
+
+&.col-75-25 {
+    display: grid;
+    grid-template-columns: 100%;
+    @media ($xs) {
+        & > div {
+            width: 100%;
+        }
+    }
+    @media ($lg) {
+       grid-template-columns: minmax(calc(75% - 100px), 75%) minmax(calc(25% - 100px), 25%);
+    }
+}
+
+&.col-25-75 {
+    display: grid;
+    grid-template-columns: 100%;
+    @media ($xs) {
+        & > div {
+            width: 100%;
+        }
+    }
+    @media ($lg) {
+       grid-template-columns: minmax(calc(25% - 100px), 25%) minmax(calc(75% - 100px), 75%);
+    }
+}
+
+&.col-60-40 {
+    display: grid;
+    grid-template-columns: 100%;
+    @media ($xs) {
+        & > div {
+            width: 100%;
+        }
+    }
+    @media ($lg) {
+       grid-template-columns: minmax(calc(60% - 100px), 60%) minmax(calc(40% - 100px), 40%);
+    }
+}
+
+&.col-40-60 {
+    display: grid;
+    grid-template-columns: 100%;
+    @media ($xs) {
+        & > div {
+            width: 100%;
+        }
+    }
+    @media ($md) {
+       grid-template-columns: minmax(calc(40% - 100px), 40%) minmax(calc(60% - 100px), 60%);
+    }
+}
+
+
+&.col-70-30 {
+    display: grid;
+    grid-template-columns: 100%;
+    @media ($xs) {
+        & > div {
+            width: 100%;
+        }
+    }
+    @media ($lg) {
+       grid-template-columns: minmax(calc(70% - 100px), 70%) minmax(calc(30% - 100px), 30%);
+    }
+}
+
+
+&.col-30-70 {
+    display: grid;
+    grid-template-columns: 100%;
+    @media ($xs) {
+        & > div {
+            width: 100%;
+        }
+    }
+    @media ($lg) {
+       grid-template-columns: minmax(calc(30% - 100px), 30%) minmax(calc(70% - 100px), 70%);
+    }
+}
+
+
+&.col-20-80 {
+    display: grid;
+    grid-template-columns: 100%;
+    @media ($xs) {
+        & > div {
+            width: 100%;
+        }
+    }
+    @media ($lg) {
+       grid-template-columns: minmax(calc(20% - 100px), 20%) minmax(calc(80% - 100px), 80%);
+    }
+}
+
+
+&.col-80-20 {
+    display: grid;
+    grid-template-columns: 100%;
+    @media ($xs) {
+        & > div {
+            width: 100%;
+        }
+    }
+    @media ($lg) {
+       grid-template-columns: minmax(calc(80% - 100px), 80%) minmax(calc(20% - 100px), 20%);
+    }
+}
+
+
+&.col-3 {
+    display: grid;
+    grid-template-columns: 100%;
+    @media ($xs) {
+        & > div {
+            width: 100%;
+        }
+    }
+    @media ($md) {
+       grid-template-columns: minmax(calc(50% - 100px), 50%) minmax(calc(50% - 100px), 50%);
+    }
+    @media ($xl) {
+        grid-template-columns: minmax(calc(33.3333% - 100px), 33.3333%) minmax(calc(33.3333% - 100px), 33.3333%);
+    }
+}
+
+
+&.col-4 {
+    display: grid;
+    grid-template-columns: 100%;
+    @media ($xs) {
+        & > div {
+            width: 100%;
+        }
+    }
+    @media ($md) {
+       grid-template-columns: minmax(calc(50% - 100px), 50%) minmax(calc(50% - 100px), 50%);
+    }
+    @media ($xl) {
+        grid-template-columns: minmax(calc(25% - 100px), 25%) minmax(calc(25% - 100px), 25%) minmax(calc(25% - 100px), 25%) minmax(calc(25% - 100px), 25%) ;
+    }
+}
+
+&.col-5 {
+    display: grid;
+    grid-template-columns: 100%;
+    @media ($xs) {
+        & > div {
+            width: 100%;
+        }
+    }
+    @media ($md) {
+       grid-template-columns: minmax(calc(50% - 100px), 50%) minmax(calc(50% - 100px), 50%);
+    }
+    @media ($lg) {
+        grid-template-columns: minmax(calc(33.3333% - 100px), 33.3333%) minmax(calc(33.3333% - 100px), 33.3333%) minmax(calc(3333.3333% - 100px), 3333.3333%);
+     }
+    @media ($xl) {
+        grid-template-columns: minmax(calc(20% - 100px), 20%) minmax(calc(20% - 100px), 20%) minmax(calc(20% - 100px), 20%) minmax(calc(20% - 100px), 20%) minmax(calc(20% - 100px), 20%);
+    }
+}
+
+
+&.col-6 {
+    display: grid;
+    grid-template-columns: 100%;
+    @media ($xs) {
+        & > div {
+            width: 100%;
+        }
+    }
+    @media ($sm) {
+        grid-template-columns: minmax(calc(50% - 100px), 50%) minmax(calc(50% - 100px), 50%);
+     }
+    @media ($lg) {
+        grid-template-columns: minmax(calc(33.3333% - 100px), 33.3333%) minmax(calc(33.3333% - 100px), 33.3333%) minmax(calc(3333.3333% - 100px), 3333.3333%);
+     }
+    @media ($xl) {
+        grid-template-columns: minmax(calc(25% - 100px), 25%) minmax(calc(25% - 100px), 25%) minmax(calc(25% - 100px), 25%) minmax(calc(25% - 100px), 25%);
+    }
+    @media ($xxl) {
+        grid-template-columns: minmax(calc(16.6666% - 100px), 16.6666%) minmax(calc(16.6666% - 100px), 16.6666%) minmax(calc(16.6666% - 100px), 16.6666%) minmax(calc(16.6666% - 100px), 16.6666%) minmax(calc(16.6666% - 100px), 16.6666%) minmax(calc(16.6666% - 100px), 16.6666%);
+    }
+}
+
+//end columns

@@ -1,0 +1,35 @@
+import { Meta } from  '@storybook/addon-docs';
+
+<Meta title="Introduction/1- Introduction"/>
+
+#Welcome to IMAGINE Storybook
+
+<br/>
+
+### Quick start
+
+Create new react application and install **Imagine**
+
+```bash
+npx create-react-app myApp
+
+cd myApp
+
+npm install --save Imagine
+```
+
+<p>Start using `Imagine` components</p>
+
+```javascript
+import {ImagineProvider, H1} from 'imagine';
+
+function App() {
+    
+    return (
+
+        <ImagineProvider id={'ImagineProvider-default'} height={'150px'}>
+            <H1 id={h1-default} text={'I am Header'} />
+        </ImagineProvider>
+    ); 
+}
+```

@@ -1,0 +1,208 @@
+@mixin customScrollBar {
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 3px;
+    border-right: 4px dotted transparent;
+    border-left: 5px dotted transparent;
+    background-clip: content-box;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #666;
+    border-radius: 3px;
+    border-right: 4px dotted transparent;
+    border-left: 5px dotted transparent;
+    background-clip: content-box;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar:horizontal {
+    height: 5px;
+    border-radius: 5px;
+  }
+}
+
+html {
+  font-size: 14px;
+  @media ($md) {
+    font-size: 16px;
+  }
+  @media ($xl) {
+    font-size: 18px;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  @include customScrollBar();
+
+  & * {
+    box-sizing: border-box;
+    @include customScrollBar();
+  }
+
+  hr {
+    margin: 0;
+    border: 0;
+    height: 0.0556rem;
+    width: auto;
+  }
+
+  address {
+    margin: 0;
+  }
+
+  ul,
+  ol,
+  li,
+  dl {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  blockquote,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+
+  mark {
+    padding: 0;
+    background-color: #ffa;
+  }
+
+  sub,
+  sup {
+    font-size: 0.77778rem;
+  }
+
+  input,
+  button,
+  select,
+  optgroup,
+  textarea {
+    margin: 0;
+  }
+
+  [role="button"] {
+    cursor: pointer;
+  }
+
+  select {
+    word-wrap: normal;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  legend {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  iframe {
+    border: 0;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  /* global classes */
+
+  .fullWidth {
+    width: 100%;
+  }
+
+  .textRight {
+    text-align: right;
+  }
+
+  .textLeft {
+    text-align: left;
+  }
+
+  .textCenter {
+    text-align: center;
+  }
+
+  .rtl {
+    direction: rtl;
+    text-align: right;
+  }
+
+  .ltr {
+    direction: ltr;
+    text-align: left;
+  }
+
+  .border {
+    border: 1px solid rgba(20, 49, 151, 0.12);
+  }
+
+  .noBorder {
+    border: none;
+  }
+
+  /* hide text visuality but make it available for screen readers */
+  .sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    position: absolute;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .block {
+    display: contents;
+    & > * {
+      display: inline;
+    }
+    & a {
+      text-decoration: underline;
+    }
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+}

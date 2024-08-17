@@ -1,0 +1,63 @@
+@use "sass:map";
+@import "/src/sharedCode/scss/variable";
+@import "/src/sharedCode/scss/palette";
+$font-icon-path: "https://d1oqsep8o8n0bq.cloudfront.net/common-ui-nx/fonts/";
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "icomoon";
+  src: url("#{$font-icon-path}icomoon.eot");
+  src: url("#{$font-icon-path}icomoon.eot#iefix") format("embedded-opentype");
+  src: url("#{$font-icon-path}icomoon.ttf") format("truetype");
+  src: url("#{$font-icon-path}icomoon.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@layer HDS {
+  .imagineProvider {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    text-align: right;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    direction: rtl;
+    color: map.get($secondary, "500");
+
+    & * {
+      font-family: "Rubik", sans-serif;
+      font-optical-sizing: auto;
+    }
+
+    & i {
+      font-family: "icomoon" !important;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      &[class^="icon-"],
+      &[class*=" icon-"] {
+        font-family: "icomoon" !important;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        &::before {
+          font-family: "icomoon" !important;
+        }
+      }
+    }
+  }
+}

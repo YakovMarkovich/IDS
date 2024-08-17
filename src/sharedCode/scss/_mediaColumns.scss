@@ -1,0 +1,57 @@
+@layer PROPS {
+    div.columns-1 {
+        grid-template-columns: minmax(calc(100% - 100px), 100%);
+    }
+
+    div.columns-2 {
+        grid-template-columns: minmax(calc(50% - 100px), 50%)  minmax(calc(50% - 100px), 50%);
+    }
+
+    div.columns-3 {
+        grid-template-columns: minmax(calc(33.3333% - 100px), 33.3333%) minmax(calc(33.3333% - 100px), 33.3333%) minmax(calc(33.3333% - 100px), 33.3333%);
+    }
+
+    div.columns-4 {
+        grid-template-columns: minmax(calc(25% - 100px), 25%) minmax(calc(25% - 100px), 25%) minmax(calc(25% - 100px), 25%) minmax(calc(25% - 100px), 25%);
+    }
+
+    div.columns-5 {
+        grid-template-columns: minmax(calc(20% - 100px), 20%) minmax(calc(20% - 100px), 20%) minmax(calc(20% - 100px), 20%) minmax(calc(20% - 100px), 20%) minmax(calc(20% - 100px), 20%);
+    }
+
+    div.columns-6 {
+        grid-template-columns: minmax(calc(16.6666% - 100px), 16.6666%) minmax(calc(16.6666% - 100px), 16.6666%) minmax(calc(16.6666% - 100px), 16.6666%) minmax(calc(16.6666% - 100px), 16.6666%) minmax(calc(16.6666% - 100px), 16.6666%) minmax(calc(16.6666% - 100px), 16.6666%);
+    }
+
+    div.columns-75-25 {
+        grid-template-columns: minmax(calc(75% - 100px), 75%) minmax(calc(25% - 100px), 25%);
+    }
+
+    div.columns-25-75 {
+        grid-template-columns: minmax(calc(25% - 100px), 25%) minmax(calc(75% - 100px), 75%);
+    }
+
+    div.columns-70-30 {
+        grid-template-columns: minmax(calc(70% - 100px), 70%) minmax(calc(30% - 100px), 30%);
+    }
+
+    div.columns-30-70 {
+        grid-template-columns: minmax(calc(30% - 100px), 30%) minmax(calc(70% - 100px), 70%);
+    }
+
+    div.columns-80-20 {
+        grid-template-columns: minmax(calc(80% - 100px), 80%) minmax(calc(20% - 100px), 20%);
+    }
+
+    div.columns-20-80 {
+        grid-template-columns: minmax(calc(20% - 100px), 20%) minmax(calc(80% - 100px), 80%);
+    }
+
+    div.columns-60-40 {
+        grid-template-columns: minmax(calc(60% - 100px), 60%) minmax(calc(40% - 100px), 40%);
+    }
+
+    div.columns-40-60 {
+        grid-template-columns: minmax(calc(40% - 100px), 40%) minmax(calc(60% - 100px), 60%);
+    }
+}

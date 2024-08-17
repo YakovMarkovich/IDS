@@ -1,0 +1,35 @@
+@use "sass:map";
+@import "./variable";
+
+@layer PROPS {
+    @each $i in map.keys($justifyContent) {
+        .justifyContent-#{$i} {
+            justify-content: map_get($justifyContent, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($alignItems) {
+        .alignItems-#{$i} {
+            align-items: map_get($alignItems, "#{$i}");
+        }
+    }
+
+    @each $i in map.keys($flexDirection) {
+        .flexDirection-#{$i} {
+            flex-direction: map_get($flexDirection, "#{$i}");
+        }
+    }
+
+    .flexGrow-0 {
+        flex-grow: 0;
+    }
+    .flexGrow-1 {
+        flex-grow: 1;
+    }
+    .flexShrink-0 {
+        flex-shrink: 0;
+    }
+    .flexShrink-1 {
+        flex-shrink: 1;
+    }
+}
