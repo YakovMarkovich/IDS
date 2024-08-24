@@ -1,0 +1,87 @@
+@use "sass:map";
+@import "src/sharedCode/scss/palette";
+@import "src/sharedCode/scss/variable";
+
+@mixin scrollingFun {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  padding-bottom: map.get($spacing, "15");
+  width: map.get($width, "100");
+  max-width: fit-content;
+  justify-content: flex-start;
+  flex-direction: row;
+  & > * {
+    flex-shrink: 0;
+  }
+}
+
+@layer HDS {
+  .Container {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: none;
+    text-align: inherit;
+    flex: 0 0 auto;
+    word-break: break-word;
+    gap: map.get($spacing, "5");
+    width: map.get($width, "100");
+    color: map.get($secondary, "500");
+    background: map.get($primary, "0");
+    border-radius: map.get($roundCorner, "0");
+    position: relative;
+    height: auto;
+
+    & > * {
+      display: flex;
+    }
+
+    // added columns classes
+    @import "src/sharedCode/scss/columns";
+  }
+}
+
+@layer PROPS {
+  .Container {
+    &.scroll-xs {
+      @media (max-width: $sm-size) {
+        @include scrollingFun;
+      }
+    }
+
+    &.scroll-sm {
+      @media (max-width: $md-size) {
+        @include scrollingFun;
+      }
+    }
+
+    &.scroll-md {
+      @media (max-width: $lg-size) {
+        @include scrollingFun;
+      }
+    }
+
+    &.scroll-lg {
+      @media (max-width: $xl-size) {
+        @include scrollingFun;
+      }
+    }
+
+    &.scroll-xl {
+      @media (max-width: $xl-size) {
+        @include scrollingFun;
+      }
+    }
+
+    &.scroll-xxl {
+      @include scrollingFun;
+    }
+
+    @media (max-width: $lg-size) {
+      &::-webkit-scrollbar-thumb {
+        background: transparent;
+      }
+    }
+  }
+}

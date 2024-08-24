@@ -7,7 +7,7 @@
   $gradients_colors_number_lists: 100, 700;
   $gradients_colors_cards: 100, 700, GR-1, GR-2, GR-3, GR-4, GR-5;
 
-  @each $i in map.keys($primary_colors_number_lists) {
+  @each $i in $primary_colors_number_lists {
     .color-primary-#{$i} {
       color: map-get($primary, "#{$i}");
     }
@@ -16,25 +16,25 @@
     }
   }
 
-  @each $i in map.keys($secondary_colors_number_lists) {
+  @each $i in $secondary_colors_number_lists {
     .color-secondary-#{$i} {
       color: map-get($secondary, "#{$i}");
     }
   }
 
-  @each $i in map.keys($primary_colors_number_lists) {
+  @each $i in $primary_colors_number_lists {
     .background-primary-#{$i} {
       background-color: map-get($primary, "#{$i}");
     }
   }
 
-  @each $i in map.keys($secondary_colors_number_lists) {
+  @each $i in $secondary_colors_number_lists {
     .background-secondary-#{$i} {
       background-color: map-get($secondary, "#{$i}");
     }
   }
 
-  @each $i in map.keys($gradients_colors_number_lists) {
+  @each $i in $gradients_colors_number_lists {
     .background-gradients-#{$i} {
       background-image: map-get($gradients, "#{$i}");
       background-repeat: no-repeat;
@@ -42,7 +42,7 @@
     }
   }
 
-  @each $i in map.keys($gradients_colors_cards) {
+  @each $i in $gradients_colors_cards {
     .background-gradients-#{$i} {
         background-image: map-get($gradients, "#{$i}");
         background-repeat: no-repeat;

@@ -1,0 +1,60 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Wrappers/3- Container/Document" />
+
+# Container Component
+
+<br />
+<br />
+
+### References
+
+> [אפיון טכני](https://confprod:8443/display/DIG/ImagineProvider)
+
+<br />
+<br />
+
+### Quick start
+
+install <u>**Imagine**</u> package into your application
+
+```bash
+
+cd yourApp
+
+npm install --save Imagine
+```
+
+### Start using <u>`Container` </u> component
+
+<br />
+<br />
+
+##### Example:
+
+```javascript
+import { ImagineProvider, Container, H2, Text, Link } from "imagine";
+
+function App() {
+  return (
+    <ImagineProvider>
+      <Container
+        flexDirection={"col"}
+        padding={"20"}
+        background={"primary-500"}
+        color={"primary-50"}
+      >
+        <H2 text={"כותרת אקראית לחלוטין"} />
+        <Text
+          text={
+            "רכיב קונטיינר הוא רכיב מעטפת שמקבל הגדרות עיצוביות ויכול להכיל בתוכו כל רכיב אחר"
+          }
+        />
+        <Link href={"https://google.com"}>
+          <Text text={"קישור לגוגל"} type={"plaintext"} />
+        </Link>
+      </Container>
+    </ImagineProvider>
+  );
+}
+```

@@ -1,11 +1,12 @@
-import  { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import styles from "./scss/ImagineProvider.module.scss";
 import ImagineProviderType from "./interface/ImagineProvider_interface";
 import {
   toCssClass,
   createDesignClassNameByProps,
   useDetectResizeScreen,
-  detectMediaProps,shortId
+  detectMediaProps,
+  shortId,
 } from "../../sharedCode/helpers/helpers";
 
 const ImagineProvider = (props: ImagineProviderType): JSX.Element => {
@@ -15,7 +16,10 @@ const ImagineProvider = (props: ImagineProviderType): JSX.Element => {
 
   // manage media props
   const currentScreenSize = useDetectResizeScreen();
-  let cssForMediaQuery: string = useMemo(()=> detectMediaProps(props?.[currentScreenSize]), [currentScreenSize])
+  let cssForMediaQuery: string = useMemo(
+    () => detectMediaProps(props?.[currentScreenSize]),
+    [currentScreenSize]
+  );
 
   const cssStyles = toCssClass([
     styles.imagineProvider,
@@ -68,7 +72,6 @@ const ImagineProvider = (props: ImagineProviderType): JSX.Element => {
     <div
       className={"imaginePage"}
       id={"imaginePage"}
-      style={{ ...height, ...props?.style }}
     >
       <div
         {...imagineProviderProps}

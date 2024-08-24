@@ -6,12 +6,12 @@ $xl-size:1200px;
 $xxl-size:1400px;
 
 //use these variables for @media
-$xs: "(max-width): #{$sm-size - 1})"; //575px
-$sm: "(min-width): #{$sm-size})"; //576px
-$md: "(min-width): #{$md-size})"; //768px
-$lg: "(min-width): #{$lg-size})"; //992px
-$xl: "(min-width): #{$xl-size})"; //1200px
-$xxl: "(min-width): #{$xxl-size})"; //1400px
+$xs: "(max-width: #{$sm-size - 1})"; //575px
+$sm: "(min-width: #{$sm-size})"; //576px
+$md: "(min-width: #{$md-size})"; //768px
+$lg: "(min-width: #{$lg-size})"; //992px
+$xl: "(min-width: #{$xl-size})"; //1200px
+$xxl: "(min-width: #{$xxl-size})"; //1400px
 
 // use these variables for @container
 $wrapper-xs: "width <= #{$sm-size - 1}"; //575px
