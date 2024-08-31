@@ -1,0 +1,57 @@
+@use "sass:map";
+@import "src/sharedCode/scss/palette";
+@import "src/sharedCode/scss/variable";
+
+@layer HDS {
+  .divider {
+    width: map.get($width, "100");
+    display: flex;
+    height: 1px;
+    background: map.get($primary, "250");
+    border: 0;
+    margin-top: map.get($spacing, "10");
+    margin-bottom: map.get($spacing, "10");
+
+    &.thickness-2 {
+      height: 2px;
+    }
+    &.thickness-3 {
+      height: 3px;
+    }
+    &.thickness-4 {
+      height: 4px;
+    }
+    &.thickness-5 {
+      height: 5px;
+    }
+    &.divider-right {
+      align-self: flex-start;
+    }
+    &.divider-center {
+      align-self: center;
+    }
+    &.divider-left {
+      align-self: flex-end;
+    }
+    &.vertical {
+      width: 1px;
+      display: flex;
+      align-self: stretch;
+      height: auto;
+      margin-block: 0;
+
+      &.thickness-2 {
+        width: 2px;
+      }
+      &.thickness-3 {
+        width: 3px;
+      }
+      &.thickness-4 {
+        width: 4px;
+      }
+      &.thickness-5 {
+        width: 5px;
+      }
+    }
+  }
+}

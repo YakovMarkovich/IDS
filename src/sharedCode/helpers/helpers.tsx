@@ -64,7 +64,7 @@ export const getLowerCase = (string: string | null | undefined): string => {
 };
 
 // detect Media styles
-export const detectMediaProps = (mediaProps?: any): string => {
+export const detectMediaProps = (mediaProps?: any): string => {   
   if (mediaProps) {
     // @ts-ignore
     const resultOfClassNames = Object.entries(mediaProps).map(
@@ -160,4 +160,42 @@ export const getSizeAttributes = (props: any) => {
     minHeight: props?.fixedMinHeight,
     maxHeight: props?.fixedMaxHeight,
   };
+};
+
+/** Remove duplicate object from array by KEY */
+export const removeDuplicateObjects = (array, key) => {
+  const set = new Set();
+  return array.filter((item) => {
+    const alreadyHas = set.has(item[key]);
+    set.add(item[key]);
+    return !alreadyHas;
+  });
+};
+
+/** resolve problem of order class names in DOM */
+/* copilot
+Reversing the Array: By reversing the array before calling removeDuplicateObjects, we ensure that the last occurrence of each prefix is kept.
+Reversing Back: After removing duplicates, we reverse the array back to maintain the original order of class names.
+This way, the fontSize-30-abcD class will be applied correctly, and the fontSize-28-bdX4 class will be removed.
+
+*/
+export const setOrderClassNames = (classNames: string) => {
+  console.log("classNames ", classNames);
+  
+  let allClassNames = classNames
+    .split(" ")
+    .map((part) => part.trim())
+    .filter((part) => part != "");
+  let objectOfClasses: object[] = [];
+  allClassNames.map((nameOfStyle) => {
+    const start = nameOfStyle?.split("-")?.[0];
+    objectOfClasses.push({ start, nameOfStyle });
+  });
+  const uniq = removeDuplicateObjects(
+    objectOfClasses.reverse(),
+    "start"
+  ).reverse();
+  console.log('res ', uniq.map((obj) => obj.nameOfStyle).join(" "));
+  
+  return uniq.map((obj) => obj.nameOfStyle).join(" ");
 };

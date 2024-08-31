@@ -1,0 +1,49 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Atoms/Titles/Document" />
+
+# Title Components (H1, H2, H3, H4, H5)
+
+<br />
+<br />
+
+### References
+
+> [אפיון טכני](https://confprod:8443/display/DIG/Title)
+
+<br />
+<br />
+
+### Quick start
+
+install <u>**Imagine**</u> package into your application
+
+```bash
+
+cd yourApp
+
+npm install --save Imagine
+```
+
+### Start using <u>`H1,H2,H3,H4,H5` </u> component
+
+<br />
+<br />
+
+##### Example:
+
+```javascript
+import { ImagineProvider, H1, H2, H3, H4, H5} from "imagine";
+
+function App() {
+  return (
+    <ImagineProvider>
+       <H1 text={'Headline-1'}/>
+       <H2 text={'Headline-2'}/>
+       <H3 text={'Headline-3'}/>
+       <H4 text={'Headline-4'}/>
+       <H5 text={'Headline-5'}/>
+    </ImagineProvider>
+  );
+}
+```

@@ -1,0 +1,10 @@
+@use "sass:map";
+@import "src/sharedCode/scss/palette";
+@import "src/sharedCode/scss/variable";
+
+@layer HDS {
+  .title {
+    margin: map.get($spacing, "0");
+    text-align: right;
+  }
+}
