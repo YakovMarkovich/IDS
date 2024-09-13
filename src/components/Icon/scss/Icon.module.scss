@@ -1,0 +1,44 @@
+@use 'sass:map';
+@import 'src/sharedCode/scss/palette';
+@import 'src/sharedCode/scss/variable';
+
+@layer HDS {
+    .icon {
+        font-size: 0.88889rem;
+        width: 0.88889rem;
+        height: 0.88889rem;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        background-color: map.get($primary, "0");
+        flex-grow: 0;
+        flex-shrink: 0;
+
+        &disabled {
+            cursor: not-allowed;
+            color: map.get($disabled, "fg");
+        }
+
+        &.small, &.S {
+            font-size: 0.88889rem;
+            width: 0.88889rem;
+            height: 0.88889rem;
+        }
+
+        &.medium, &.M {
+            font-size: 1.44444rem;
+            width: map.get($spacing, "30");
+            height: map.get($spacing, "70");
+        }
+
+        &.large, &.L {
+            font-size: 3.11111rem;
+            width: map.get($spacing, "70");
+            height: map.get($spacing, "70");
+        }
+
+        &.clickable {
+            cursor: pointer;
+        }
+    }
+}

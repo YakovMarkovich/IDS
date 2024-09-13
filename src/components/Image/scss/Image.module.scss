@@ -1,0 +1,116 @@
+@use "sass:map";
+@import 'src/sharedCode/scss/palette';
+@import 'src/sharedCode/scss/variable';
+
+@layer HDS {
+    .image {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        position: relative;
+        border: map.get($border, "transparent");
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: flex;
+        }
+
+        &.noMaxWidth {
+            overflow: hidden;
+            img {
+                max-width: none;
+                align-self: flex-start;
+            }
+        }
+
+        &.hasBackgroundImage {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            img {
+                align-self: center;
+            }
+        }
+
+        &.nested {
+            transition: 0.75s all;
+
+            &.max-size-xxl {
+                img {
+                    width: map.get($nested, "xxl");
+                }
+            }
+
+            &.max-size-xl {
+                img {
+                    width: map.get($nested, "xl");
+                    height: map.get($nested, "xl");
+                }
+            }
+
+            &.max-size-lg {
+                img {
+                    width: map.get($nested, "lg");
+                    height: map.get($nested, "lg");
+                }
+            }
+
+            &.max-size-md {
+                img {
+                    width: map.get($nested, "md");
+                    height: map.get($nested, "md");
+                }
+            }
+            &.max-size-sm {
+                img {
+                    width: map.get($nested, "sm");
+                    height: map.get($nested, "sm");
+                }
+            }
+            &.max-size-xs {
+                img {
+                    width: map.get($nested, "xs");
+                    height: map.get($nested, "xs");
+                }
+            }
+
+            img {
+                transition: 0.75s all;
+                width: 100%;
+                height: 100%;
+            }
+
+            @media #{$xs} {
+                width: map.get($nested, "xs");
+                height: map.get($nested, "xs");
+            }
+
+            @media #{$sm} {
+                width: map.get($nested, "sm");
+                height: map.get($nested, "sm");
+            }
+
+            @media #{$md} {
+                width: map.get($nested, "md");
+                height: map.get($nested, "md");
+            }
+
+            @media #{$lg} {
+                width: map.get($nested, "lg");
+                height: map.get($nested, "lg");
+            }
+
+            @media #{$xl} {
+                width: map.get($nested, "xl");
+                height: map.get($nested, "xl");
+            }
+
+            @media #{$xxl} {
+                width: map.get($nested, "xxl");
+                height: map.get($nested, "xxl");
+            }
+        }
+    }
+}

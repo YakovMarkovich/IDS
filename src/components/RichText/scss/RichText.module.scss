@@ -1,0 +1,35 @@
+@use "sass:map";
+@import 'src/sharedCode/scss/palette';
+@import 'src/sharedCode/scss/variable';
+
+@layer HDS {
+    .RichText {
+        display: inline-block;
+        line-height: 1.33333rem;
+        font-size: 1rem;
+        font-weight: 400;
+        font-style: normal;
+
+        & * {
+            unicode-bidi: isolate;
+        }
+
+        a {
+            color: map.get($primary, '500');
+            background: map.get($primary, '0');
+
+            &:hover {
+                color: map.get($primary, '600');  
+            }
+            &:active:not(.disabled) {
+                color: map.get($primary, '700');  
+            }
+        }
+        b {
+            font-weight: 700;
+        }
+        strong {
+            font-weight: 500;
+        }
+    }
+}

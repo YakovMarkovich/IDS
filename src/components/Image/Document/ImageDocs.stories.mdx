@@ -1,0 +1,49 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Atoms/Image/Document" />
+
+# Image Component
+
+<br />
+<br />
+
+### References
+
+> [אפיון טכני](https://confprod:8443/display/DIG/Image)
+
+<br />
+<br />
+
+### Quick start
+
+install <u>**Imagine**</u> package into your application
+
+```bash
+
+cd yourApp
+
+npm install --save Imagine
+```
+
+### Start using <u>`Image` </u> component
+
+<br />
+<br />
+
+##### Example:
+
+```javascript
+import { Image } from "imagine";
+import cardImage from './asset/cardImage';
+
+function App() {
+  return (
+    <Image
+        src={'cardImage'}
+        alt= {'Google}
+        variant="nested"
+        size="lg"
+    />  
+  );
+}
+```

@@ -46,6 +46,16 @@ export const toCssClass = (arr: any[]): string =>
 export const shortId = (): string =>
   `ID_${Math.random().toString(36).slice(-10)}`;
 
+/** Detect string is HTML Format */
+export const isHTMLFormat = (strHTML: string | undefined): boolean => {
+  if (strHTML) {
+    const regex = new RegExp("<.*?>");
+    return regex?.test(strHTML);
+  } else {
+    return false;
+  }
+};
+
 /** create design class name by props */
 export const createDesignClassNameByProps = (props: any) => {
   const a = [];
@@ -64,7 +74,7 @@ export const getLowerCase = (string: string | null | undefined): string => {
 };
 
 // detect Media styles
-export const detectMediaProps = (mediaProps?: any): string => {   
+export const detectMediaProps = (mediaProps?: any): string => {
   if (mediaProps) {
     // @ts-ignore
     const resultOfClassNames = Object.entries(mediaProps).map(
@@ -181,7 +191,7 @@ This way, the fontSize-30-abcD class will be applied correctly, and the fontSize
 */
 export const setOrderClassNames = (classNames: string) => {
   console.log("classNames ", classNames);
-  
+
   let allClassNames = classNames
     .split(" ")
     .map((part) => part.trim())
@@ -195,7 +205,7 @@ export const setOrderClassNames = (classNames: string) => {
     objectOfClasses.reverse(),
     "start"
   ).reverse();
-  console.log('res ', uniq.map((obj) => obj.nameOfStyle).join(" "));
-  
+  console.log("res ", uniq.map((obj) => obj.nameOfStyle).join(" "));
+
   return uniq.map((obj) => obj.nameOfStyle).join(" ");
 };

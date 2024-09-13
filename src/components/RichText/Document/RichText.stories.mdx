@@ -1,0 +1,51 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Atoms/RichText/Document" />
+
+# Divider Component
+
+<br />
+<br />
+
+### References
+
+> [אפיון טכני](https://confprod:8443/display/DIG/RichText)
+
+<br />
+<br />
+
+### Quick start
+
+install <u>**Imagine**</u> package into your application
+
+```bash
+
+cd yourApp
+
+npm install --save Imagine
+```
+
+### Start using <u>`RichText` </u> component
+
+<br />
+<br />
+
+##### Example:
+
+```javascript
+import { ImagineProvider, Container, RichText } from "imagine";
+
+function App() {
+  return (
+    <ImagineProvider>
+      <Container
+        flexDirection={"col"}
+        justifyContent={"center"}
+        alignItems={"center"}
+      >
+        <RichText strHTML={'<p>זה טקסט<a href="https://google.co.il">קליק על הלינק</a><strong>זה טקסט מוגדש</strong></p>'}/>
+      </Container>
+    </ImagineProvider>
+  );
+}
+```
